@@ -14,8 +14,7 @@ const   base_path = './',
         dist = base_path + 'assets',
         paths = {  
             js: src + '/js/*.js',
-            scss: [ src +'/sass/*.scss', src +'/sass/**/*.scss', src +'/sass/**/**/*.scss'],
-            html: src + '/**/*.html'
+            scss: [ src +'/sass/*.scss', src +'/sass/**/*.scss', src +'/sass/**/**/*.scss']
         };
 
 // Combine & Compress JS into one script.js
