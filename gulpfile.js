@@ -6,7 +6,8 @@ const   gulp = require('gulp'),
         rename = require('gulp-rename'),
         plumber = require('gulp-plumber'),
         gutil = require('gulp-util'),
-        minifyCss = require('gulp-minify-css');
+        minifyCss = require('gulp-minify-css'),
+        eslint = require('gulp-eslint');
 
 // Set the path variables
 const   base_path = './',
@@ -21,6 +22,8 @@ const   base_path = './',
 gulp.task('combine-js', () => {  
   return gulp.src(paths.js)
     .pipe(concat('scripts.js'))
+    .pipe(eslint())
+    .pipe(eslint.format())
     .pipe(uglify())
     .pipe(gulp.dest(dist + '/js'));
 });

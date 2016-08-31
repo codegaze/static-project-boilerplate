@@ -1,0 +1,1 @@
+function gello(){}console.log("My scripts");
